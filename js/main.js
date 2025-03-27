@@ -1,4 +1,3 @@
-
 ///disabled button
 document.addEventListener('DOMContentLoaded', function () {
 	let btn = document.getElementById('btn');
@@ -86,19 +85,6 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 
 	animateChart();
-});
-
-/////hover item
-document.addEventListener('DOMContentLoaded', function () {
-	document.querySelectorAll('.packages__item-link').forEach(link => {
-		link.addEventListener('mouseenter', function () {
-			this.closest('.packages__item').classList.add('hovered');
-		});
-
-		link.addEventListener('mouseleave', function () {
-			this.closest('.packages__item').classList.remove('hovered');
-		});
-	});
 });
 
 // program accordion

@@ -81,6 +81,17 @@
 	}
 }
 
+// section services
+.section__services {
+	padding-top: 120px;
+	@media screen and (max-width: 1199px) {
+		padding-top: 80px;
+	}
+	@media screen and (max-width: 480px) {
+		padding-top: 40px;
+	}
+}
+
 // section program
 .section__program {
 	padding-bottom: 120px;
@@ -120,7 +131,6 @@
 		}
 	}
 }
-
 .program__accordion {
 	background-color: #f3f5f9;
 	padding: 80px 90px;
@@ -333,14 +343,12 @@
 		padding: 8px 28px 8px 12px;
 	}
 }
-
 .program__module-hash-btn.active::after {
 	transform: translateY(-50%) rotate(0deg);
 }
 
 .program__close-all {
 	display: none;
-
 	@media screen and (max-width: 959px) {
 		position: relative;
 		display: none;
@@ -389,17 +397,18 @@
 	position: relative;
 	z-index: 2;
 }
-
 .packages__top {
 	display: flex;
 	justify-content: space-between;
 	gap: 20px;
-	margin-bottom: 50px;
+	margin-bottom: 10px;
+	padding: 0 10px;
 	@media screen and (max-width: 1199px) {
 		flex-direction: column;
 		align-items: flex-start;
 		text-align: left;
 		margin-bottom: 25px;
+		padding-right: 0;
 	}
 	@media screen and (max-width: 639px) {
 		margin-bottom: 10px;
@@ -431,7 +440,8 @@
 }
 .packages__items {
 	display: flex;
-	padding-top: 20px;
+	padding: 40px 10px 0;
+	gap: 10px;
 }
 .packages__item {
 	display: flex;
@@ -441,12 +451,40 @@
 	max-width: 386px;
 	width: 100%;
 	background-color: #ffffff;
-	padding: 40px 25px;
+	padding: 39px 20px;
 	border-radius: 30px;
 	text-align: center;
 	transition: 0.3s ease-in-out;
-	@media screen and (max-width: 959px) {
+	@media screen and (max-width: 1199px) {
 		padding: 30px 20px;
+	}
+	&:hover {
+		background-image: linear-gradient(
+			180deg,
+			rgba(116, 60, 254, 1) 0%,
+			rgba(128, 245, 167, 1) 100%
+		);
+		transform: scale(1.05);
+		@media screen and (max-width: 1199px) {
+			transform: scale(1.06);
+		}
+		@media screen and (max-width: 959px) {
+			transform: scale(1.08);
+		}
+		h3,
+		p,
+		ul li,
+		h4,
+		.packages__item-link {
+			color: #ffffff;
+			transition: color 0.3s ease-in-out;
+		}
+		p,
+		ul {
+			&::after {
+				background-color: #ffffff;
+			}
+		}
 	}
 	h3 {
 		color: #20115a;
@@ -505,6 +543,9 @@
 		line-height: 1.55;
 		font-weight: 600;
 		margin-bottom: 30px;
+		@media screen and (max-width: 959px) {
+			font-size: 22px;
+		}
 	}
 	.packages__item-link {
 		display: inline-block;
@@ -531,36 +572,6 @@
 	flex-direction: column;
 	align-items: center;
 }
-.packages__item.hovered {
-	background-image: linear-gradient(
-		180deg,
-		rgba(116, 60, 254, 1) 0%,
-		rgba(128, 245, 167, 1) 100%
-	);
-	transform: scaleY(1.05);
-
-	h3,
-	p,
-	ul li,
-	h4,
-	.packages__item-link {
-		color: #ffffff;
-		transition: color 0.3s ease-in-out;
-	}
-}
-
-.packages__item.hovered {
-	p {
-		&::after {
-			background-color: #ffffff;
-		}
-	}
-	ul {
-		&::after {
-			background-color: #ffffff;
-		}
-	}
-}
 
 // section create
 
@@ -573,7 +584,6 @@
 		width: 100% !important;
 	}
 }
-
 .t-input-block {
 	input {
 		&:hover {
@@ -695,7 +705,6 @@
 		justify-content: center;
 		align-items: center;
 		position: relative;
-		position: relative;
 		height: 500px;
 		@media screen and (max-width: 1199px) {
 			height: 430px;
@@ -712,7 +721,6 @@
 			height: 100%;
 			background-image: url('../images/careers-before.png');
 			background-repeat: no-repeat;
-
 			background-size: contain;
 		}
 		img {
